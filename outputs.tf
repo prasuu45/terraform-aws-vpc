@@ -11,3 +11,7 @@ output "default_vpc_info" {
   value = data.aws_vpc.default
   
 }
+
+output "public_subnet_ids" {
+  value = aws.public_subnet[*].id
+}
