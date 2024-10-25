@@ -78,7 +78,7 @@ resource "aws_subnet" "database" {
   )
 }
 resource "aws_db_subnet_group" "default" {
-  name       = name = lower(local.resource_name)
+  name       =  lower(local.resource_name)
   subnet_ids = aws_subnet.database[*].id
 
   tags = merge(
